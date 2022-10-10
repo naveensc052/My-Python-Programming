@@ -7,3 +7,7 @@
 3.Leap year
 
 4.Banker Roulette
+
+5.placing tresure
+
+6.Rock,paper and scissor game
