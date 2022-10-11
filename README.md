@@ -11,3 +11,9 @@
 5.placing tresure
 
 6.Rock,paper and scissor game
+
+7.Average height
+
+8.High score
+
+9.Password generator
