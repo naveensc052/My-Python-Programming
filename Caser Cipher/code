@@ -1,1 +1,36 @@
+letter = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+def encrypt(code,shift):
+    enword = ""
+    for j in range(0,len(code)):
+        for i in range(0,len(letter)):
+            if code[j] == letter[i]:
+                x = i + shift
+                if x >= 26:
+                    enword += letter[x-26]
+                else:
+                    enword += letter[x] 
+    print(enword)
+def decrypt(code,shift):
+    deword = ""
+    for j in range(0,len(code)):
+        for i in range(0,len(letter)):
+            if code[j] == letter[i]:
+                x = i - shift
+                if x < 0:
+                    deword += letter[26+x]
+                else:
+                    deword += letter[x] 
+    print(deword)
 
+print(f"Welcome to CAESAR_CIPHER!\nTo ENCRYPT Enter -> 1\nTo DECRYPT Enter -> 2\n")
+choice = int(input("PLEASE enter your CHOICE : "))
+if choice == 1:
+    code = input("ENter the word to encrypt:")
+    shift = int(input("How much shift?"))      
+    encrypt(code, shift)
+elif choice == 2:
+    code = input("ENter the word to decrypt:")
+    shift = int(input("How much shift?"))
+    decrypt(code,shift)
+else:
+    print("Invalid Input")
